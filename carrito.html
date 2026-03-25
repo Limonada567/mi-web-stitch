@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#9999c6",
+              "primary-container": "#829bff",
+              "surface": "#f8f5ff",
+              "error": "#b41340",
+              "on-surface-variant": "#575881",
+              "on-primary": "#f2f1ff",
+              "tertiary-dim": "#822c78",
+              "secondary-dim": "#8f3000",
+              "background": "#f8f5ff",
+              "on-error-container": "#510017",
+              "primary-fixed": "#829bff",
+              "error-dim": "#a70138",
+              "outline": "#73739e",
+              "on-secondary-container": "#812b00",
+              "surface-variant": "#dbd9ff",
+              "on-primary-fixed": "#000000",
+              "primary-dim": "#0040cb",
+              "on-tertiary": "#ffeef7",
+              "secondary-fixed": "#ffc4af",
+              "surface-tint": "#0049e6",
+              "secondary-fixed-dim": "#ffb194",
+              "secondary": "#a33800",
+              "surface-dim": "#d1d0ff",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-container": "#fc96e9",
+              "tertiary-fixed-dim": "#ec89da",
+              "on-primary-fixed-variant": "#002278",
+              "inverse-surface": "#09082f",
+              "surface-container": "#e8e6ff",
+              "on-tertiary-fixed-variant": "#6e1966",
+              "on-secondary-fixed": "#611e00",
+              "outline-variant": "#a9a9d7",
+              "secondary-container": "#ffc4af",
+              "inverse-primary": "#6a89ff",
+              "on-surface": "#2a2b51",
+              "tertiary-fixed": "#fc96e9",
+              "on-secondary-fixed-variant": "#903100",
+              "primary-fixed-dim": "#6e8cff",
+              "on-primary-container": "#001a63",
+              "surface-container-low": "#f2efff",
+              "surface-container-highest": "#dbd9ff",
+              "on-secondary": "#ffefeb",
+              "on-error": "#ffefef",
+              "tertiary": "#903985",
+              "surface-bright": "#f8f5ff",
+              "error-container": "#f74b6d",
+              "on-tertiary-fixed": "#41003d",
+              "on-background": "#2a2b51",
+              "surface-container-high": "#e1dfff",
+              "primary": "#0049e6",
+              "on-tertiary-container": "#640d5d"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-950/70 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-8 max-w-[1440px] mx-auto">
+<a class="text-2xl font-black tracking-tighter text-slate-900 dark:text-slate-50 font-headline" href="index.html">KINETIC</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-colors duration-300 font-label" href="catalogo.html">Shop All</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-colors duration-300 font-label" href="catalogo.html">New Arrivals</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-colors duration-300 font-label" href="catalogo.html">Collections</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-colors duration-300 font-label" href="#">About</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="hover:text-blue-600 transition-colors duration-300 flex items-center">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<a class="hover:text-blue-600 transition-colors duration-300 flex items-center relative" href="carrito.html"><span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span><span class="absolute -top-2 -right-2 bg-primary text-on-primary text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">2</span></a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-[1440px] mx-auto">
+<!-- Breadcrumbs -->
+<nav class="mb-12 flex items-center space-x-2 text-on-surface-variant font-label text-sm">
+<a class="hover:text-primary transition-colors" href="catalogo.html">Shop</a>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="catalogo.html">Collections</a>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface font-semibold">Urban Edge Graphic Tee</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left: Image Gallery (Asymmetric Layout) -->
+<div class="lg:col-span-7 flex flex-col md:flex-row gap-6">
+<!-- Thumbnail Sidebar -->
+<div class="order-2 md:order-1 flex md:flex-col gap-4 overflow-x-auto md:overflow-y-auto hide-scrollbar max-h-[700px]">
+<div class="w-20 h-24 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden cursor-pointer ring-2 ring-primary">
+<img class="w-full h-full object-cover" data-alt="front view of high-quality urban edge graphic tee on a minimalist studio background with soft editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbHeXvppnORd7_fffbwcbHef-SYCjiqp38tsf5WXtEq7tl9VdHxcYSrY1HVqYG5x9iejiWvmCGed1DXrIl4hz-9sDlwcseKbUyI3Eeh_pAiB6yaq0fJw5iQ89v9p5r9QWi756RqWJUZEQzBUU8fVEuIsBX109o1nwPwImEs9Y_WAUppIjmpcwfZ1XHXY0RJrJljKhM13wbIggKTLBRo_qndcThjjIiDXJTwuX9lyGg0llCXdLzx0lom5aTTRuinbQ6Iv-vAlmPW7D0"/>
+</div>
+<div class="w-20 h-24 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden cursor-pointer opacity-60 hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="side profile view of the premium cotton graphic t-shirt showing the modern cut and fit on a model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5UGUx4Rq7EG6DLbheQkNHjP3WVmno-0pNwpbBq0qfbdWiXFuLb2Eohiu-6kTvdY9zIXQN5SWAp0CxAjV9nTD4apPx4yJA2ofnuJnNd2hcE0acMW6DwZuAsRYWGEqGI_mbP4LzHtalfqZtqzmUiKEs_QlXdBuy9SDMSrE0CCWlBuIz5PatuJ-VufhN3vcBnKnaEQA0tT50yhVshlENpIOjCMO8haUGj4TjCw-A5OPjpbsvNG7h-4BN_zPuNvSQl6cqNUTmLXSsZBhk"/>
+</div>
+<div class="w-20 h-24 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden cursor-pointer opacity-60 hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="close-up macro shot of the high-density graphic print detail and textured sustainable cotton fabric weave" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwMGdfOZr-oLZBQgAiRUeFM8qaz7oQPFZrlDN5_DMp4M564hpfcUObbNLicqstqmVnC9O_2UMrcW0_0-PcvDKQzkj1q1PZDu_00zW66bMO336rNCrTkicnR1KA7Oh5Ag1wtz8uRvFyduhQabes8l4tGaLQlZxPqTLUY8VisOc2SqVNh2jfevrHHfEnIALe4lJUdCBG-WxW--PPaLGemh88TK4hxfGeOmN38HZbeYsk3MRZXtGTluoHMz8g_UoIabHhe-04nNn250i9"/>
+</div>
+<div class="w-20 h-24 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden cursor-pointer opacity-60 hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="back view of the urban edge graphic tee showcasing the clean silhouette and seamless shoulder construction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNOk0XHbf2r4oo87VClRlM1eqarAQN1Bp4YahcBHH5UnAfAtI5JIX43cXwPX4_hX0nK4ffGulOSczXU9hatATP_0Q50hroc4dK_Db8XQ7vRj5yFnyvjS9m4i05YLS0ZQFUH659_OHQ-PZjalzTjBYN4v6LyEdyq_MvVwvKSluC56R9ZwidByuBU2hHKTZkf9VnbZvdIV8ZArX5jKcZj30G2-swNlOg_6fuZ2MU6UDNujZpZIJUqOuhEulENynKnSyYvVnSGNZUhUb8"/>
+</div>
+</div>
+<!-- Main Focus Image -->
+<div class="order-1 md:order-2 flex-grow relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-low group">
+<img class="w-full h-full object-cover" data-alt="full frame hero shot of the urban edge graphic tee featuring bold contemporary typography on premium white cotton fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzM5zDpRGUY5AkBjYrftCIHiOhYkv2_TZ8p4LrDhkbP7jznsJJcH7SPfOJSGJuY9T5pFWn1xAqgPYHiuZY1Yrt-lrXNf0RFpFvCvEn5GF6kIynKFvwRLdE_o1P7sBlUDWPWP0CfyKL47-TzUcnzuJY3Oz3H27dy7meQBAMZ8cNAckkw7ALrNeec2P6zBgiOUbN6tgoK9eF-qWbuOpme1qDfLWBTb18qRuwlhru0Bu6LPdy8zNo9n3pa7qNNfdyOAyNe5Yl8_t8AhQ7"/>
+<button class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-primary transition-colors shadow-lg">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+</div>
+<!-- Right: Product Information -->
+<div class="lg:col-span-5 flex flex-col space-y-10">
+<div class="space-y-4">
+<span class="text-primary font-bold tracking-widest text-xs uppercase font-label">Limited Edition Release</span>
+<h1 class="text-5xl font-extrabold font-headline tracking-tighter text-on-surface leading-none">Urban Edge Graphic Tee</h1>
+<div class="flex items-center space-x-6">
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" data-icon="star_half">star_half</span>
+<span class="ml-2 text-sm font-label font-semibold text-on-surface-variant">4.8 (124 reviews)</span>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant/30"></div>
+<span class="text-2xl font-bold font-headline text-primary">$29.99</span>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Color Selector -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="font-bold text-sm tracking-wide font-headline">COLOR: <span class="text-on-surface-variant font-medium">Kinetic White</span></span>
+</div>
+<div class="flex items-center space-x-3">
+<button class="w-10 h-10 rounded-full bg-white ring-2 ring-primary ring-offset-4 ring-offset-surface"></button>
+<button class="w-10 h-10 rounded-full bg-slate-900 hover:scale-110 transition-transform"></button>
+<button class="w-10 h-10 rounded-full bg-primary-dim hover:scale-110 transition-transform"></button>
+<button class="w-10 h-10 rounded-full bg-secondary hover:scale-110 transition-transform"></button>
+</div>
+</div>
+<!-- Size Selector -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="font-bold text-sm tracking-wide font-headline">SIZE</span>
+<a class="text-xs font-bold text-primary underline underline-offset-4 hover:opacity-80 transition-opacity" href="#">SIZE GUIDE</a>
+</div>
+<div class="grid grid-cols-5 gap-3">
+<button class="h-12 border border-outline-variant flex items-center justify-center font-bold text-sm hover:border-primary hover:text-primary transition-all rounded-lg">S</button>
+<button class="h-12 bg-primary text-on-primary border border-primary flex items-center justify-center font-bold text-sm rounded-lg">M</button>
+<button class="h-12 border border-outline-variant flex items-center justify-center font-bold text-sm hover:border-primary hover:text-primary transition-all rounded-lg">L</button>
+<button class="h-12 border border-outline-variant flex items-center justify-center font-bold text-sm hover:border-primary hover:text-primary transition-all rounded-lg">XL</button>
+<button class="h-12 border border-outline-variant flex items-center justify-center font-bold text-sm hover:border-primary hover:text-primary transition-all rounded-lg">XXL</button>
+</div>
+</div>
+</div>
+<!-- CTA -->
+<div class="flex flex-col gap-4">
+<a class="w-full h-16 bg-primary text-on-primary rounded-full font-headline font-extrabold text-lg flex items-center justify-center gap-3 hover:shadow-xl hover:shadow-primary/20 active:scale-[0.98] transition-all" href="carrito.html"><span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>Add to Cart</a>
+<div class="flex items-center justify-center gap-6 text-on-surface-variant text-xs font-label">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="local_shipping">local_shipping</span>
+                            Free Shipping
+                        </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="replay">replay</span>
+                            30-Day Returns
+                        </div>
+</div>
+</div>
+<!-- Details Accordion -->
+<div class="border-t border-outline-variant/20 pt-8 space-y-6">
+<div class="space-y-2">
+<h3 class="font-bold font-headline text-lg">Product Description</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm font-body">
+                            The Urban Edge Graphic Tee represents the intersection of street culture and premium textile engineering. Featuring a bold, high-density kinetic print across the chest, this piece is crafted from our signature 240GSM heavyweight cotton for a structured drape that holds its shape wash after wash.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 pt-4">
+<div class="space-y-1">
+<span class="text-[10px] text-primary font-black uppercase tracking-widest font-label">Material</span>
+<p class="text-sm font-bold text-on-surface font-headline">100% Organic Cotton</p>
+</div>
+<div class="space-y-1">
+<span class="text-[10px] text-primary font-black uppercase tracking-widest font-label">Weight</span>
+<p class="text-sm font-bold text-on-surface font-headline">Heavyweight 240GSM</p>
+</div>
+<div class="space-y-1">
+<span class="text-[10px] text-primary font-black uppercase tracking-widest font-label">Fit</span>
+<p class="text-sm font-bold text-on-surface font-headline">Modern Boxy Fit</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Products: "You May Also Like" -->
+<section class="mt-32 space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<h2 class="text-4xl font-black font-headline tracking-tighter uppercase">You May Also Like</h2>
+<p class="text-on-surface-variant font-body">Curated pieces to complete your kinetic wardrobe.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-white hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="west">west</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-white hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="east">east</span>
+</button>
+</div>
+</div>
+<!-- Bento-style Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Related Item 1 -->
+<div class="group cursor-pointer" onclick="window.location.href='producto.html'">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="editorial shot of a minimalist black graphic t-shirt with subtle branding on a high-contrast background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7o5wpIs4twR7asVp3d417eK2JR2YuHhilavowRgIjFfEZX9lDOTjKQiIXUfb7h1Gp43dQIbWxgnYqtEG0vJ3g4PTJ0I8Cl5KEbm7OZng_gjSzkKt19p0z5EPHVChK6pZr2qEU0LqRkReOh0CT2P7kp2JIANdJgIqdDkPV230FM5dae8vwqTcUdbUkVfj3IDc_IadRjw-FX7yflVDi18Cl93mOsDmBhOYy5Qpp9zlJvRHMrrX8XrOR_3gHwxwb6I4iSZuUlYeaL8lM"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">New</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline font-bold text-lg group-hover:text-primary transition-colors">Vortex Minimalist Tee</h3>
+<p class="text-primary font-bold">$34.00</p>
+</div>
+</div>
+<!-- Related Item 2 -->
+<div class="group cursor-pointer" onclick="window.location.href='producto.html'">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="streetwear style charcoal gray t-shirt with a vintage wash and distressed edges against an urban concrete wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy3bMTYXtkliiBoNbdXJB_YadCmth5jk7YVKib6nS39CCW80RuQinNL6nCseuIN7JJH5RoITrUrmTDPjkq19V0egptQwLeEzzgA6n2aZO8JDTNMuussl1ZUh5Ss72KIpRWll00ra7Zmjz9gc361IxGsp4G-UpFNBj6BGvN_od0n3-kx6Ix3aZXNKyMnG1rrWoBtYdK-i24cLm2K1-ZiCdO9W_qomvlPRsEZEGgguXZIvcQgQevUG4hBL5YXVKCvyraWKd4K1mE1e5L"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline font-bold text-lg group-hover:text-primary transition-colors">Shadow Wash Oversized</h3>
+<p class="text-primary font-bold">$38.00</p>
+</div>
+</div>
+<!-- Related Item 3 -->
+<div class="group cursor-pointer" onclick="window.location.href='producto.html'">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="clean crisp premium knit t-shirt in energetic orange color presented in a luxury fashion photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC32Idjg8FJ7iWly4ZSa-qTB_ux-NLAMBviOrYwoiLMYd2pp2hKRuBGieouOj08jAe297fQ4huogA3avExENPVVb2H8TC9NEzwj2TmjTe2Nu4aTVRD5WpNkHHWKd3qt-Jy7BUbtKKy2wY4p5ukbKf843guiTwj259j1knzWgooJAcdXel5b--yVddluLT9sxyL83KK76It7xCyMWRmuEL4jHSYe5mVho6TUNtiLWOJ6Fon__fK2Z0dX5IU_z17X8mlDcYdDk2BZsZox"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">Popular</div>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline font-bold text-lg group-hover:text-primary transition-colors">Kinetic Core Tee</h3>
+<p class="text-primary font-bold">$29.00</p>
+</div>
+</div>
+<!-- Related Item 4 -->
+<div class="group cursor-pointer" onclick="window.location.href='producto.html'">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-surface-container mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="artistic composition of a navy blue designer t-shirt featuring an abstract geometric print on the back" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAzPLlMRsAFDHSzjqCAbOP0czvTXPNwb627nde13iT483eTbjSyf3ENAX60ikzBnd5k7zJgoKAfvZftvhfoXoqBLI2k4gI-2FLapjbOnAqC7W5fKW-Hl1uJ0Omtpgp1qaTH4q_nauyr7i-dLiR8zOSoHzJyXwup3wqxyRcjxmygYWcoIuix83rehqA58JHM6Zz5GTrfcKPEuGI_r2p2TOBqrHNUYLXnyT2t5ReelwxFt7RiT2NtuZzdcgHjXgqo1m3pRbOt02Y69io"/>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline font-bold text-lg group-hover:text-primary transition-colors">Blueprint Graphic Tee</h3>
+<p class="text-primary font-bold">$42.00</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full py-16 px-8 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<a class="text-xl font-black text-slate-900 dark:text-slate-50 font-headline" href="index.html">KINETIC</a>
+<p class="text-slate-500 dark:text-slate-400 font-label text-sm leading-relaxed">
+                    Redefining the digital shopping experience through kinetic design and premium aesthetics.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-slate-900 dark:text-slate-50 font-headline">SHOP</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 font-label transition-transform hover:translate-x-1 inline-block duration-200" href="catalogo.html">New Arrivals</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 font-label transition-transform hover:translate-x-1 inline-block duration-200" href="catalogo.html">Graphic Tees</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 font-label transition-transform hover:translate-x-1 inline-block duration-200" href="catalogo.html">Collections</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 font-label transition-transform hover:translate-x-1 inline-block duration-200" href="catalogo.html">Sale</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-slate-900 dark:text-slate-50 font-headline">SUPPORT</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 font-label transition-transform hover:translate-x-1 inline-block duration-200" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 font-label transition-transform hover:translate-x-1 inline-block duration-200" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 font-label transition-transform hover:translate-x-1 inline-block duration-200" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 font-label transition-transform hover:translate-x-1 inline-block duration-200" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-slate-900 dark:text-slate-50 font-headline">NEWSLETTER</h4>
+<p class="text-slate-500 dark:text-slate-400 font-label text-sm">Join the club for early access to drops.</p>
+<div class="flex gap-2">
+<input class="bg-surface-container-low border-none rounded-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Your email" type="email"/>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-slate-500 dark:text-slate-400 font-label text-sm tracking-wide">© 2024 KINETIC CANVAS. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer" data-icon="instagram">retweet</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer" data-icon="twitter">retweet</span>
+</div>
+</div>
+</footer>
+</body></html>
